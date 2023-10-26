@@ -1,5 +1,5 @@
-import { Entity } from "../../../shared/entity";
-import { Slug } from "../../../shared/slug";
+import { Entity } from "../../../shared/entity"
+import { Slug } from "../../../shared/slug"
 
 export interface MapProps {
   id?: string

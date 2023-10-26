@@ -1,6 +1,6 @@
-import { UseCase } from "../../../shared/use-case";
+import { UseCase } from '../../../shared/private/use-case'
 import { Map } from '../model/map'
-import { MapRepository } from "../provider/map-repository";
+import { MapRepository } from '../provider/map-repository'
 
 export class CreateMap implements UseCase<Map, Map> {
   constructor(private readonly repository: MapRepository) {}

@@ -1,19 +1,19 @@
-import { Entity } from "../../../shared/entity"
-import { Slug } from "../../../shared/slug"
+import { Entity } from '../../../shared/private/entity'
+import { Slug } from '../../../shared/public/slug'
 
 export interface MapProps {
   id?: string
-  name: string
-  slug: string
+  name?: string
+  slug?: string
 }
 
 export class Map extends Entity<MapProps> {
-  readonly name: string
-  readonly slug: Slug
+  readonly name?: string
+  readonly slug?: Slug
 
   constructor(props: MapProps) {
     super(props)
-    this.name = props.name
-    this.slug = new Slug(props.slug)
+    if (props.name) this.name = props.name
+    if (props.slug) this.slug = new Slug(props.slug)
   }
 }

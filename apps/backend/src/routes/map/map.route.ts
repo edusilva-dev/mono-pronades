@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import { Request, Response, Router } from 'express'
+import { Map } from 'rules'
 
 const mapRoutes = Router()
 const prisma = new PrismaClient()
